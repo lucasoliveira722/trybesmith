@@ -33,5 +33,3 @@ export default class ProductModel {
     return { id: insertId, ...product };
   }
 }
-
-// FAZER A VERIFICAÇÃO NA SERVICE, AO INVÉS DE VIA MIDDLEWARE?

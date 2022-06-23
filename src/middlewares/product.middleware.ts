@@ -1,13 +1,4 @@
 import { NextFunction, Request, Response } from 'express';
-// import MyError from '../interfaces/myError.interface';
-
-// const prodNameValidator = (name: string): MyError | undefined => {
-//   if (!name) return { status: 400, message: '"name" is required' };
-//   if (typeof name !== 'string') return { status: 422, message: '"name" must be a string' };
-//   if (name.length < 3) {
-//     return { status: 422, message: '"name" length must be at least 3 characters long' };
-//   } 
-// };
 
 const prodNameValidator = (req: Request, res: Response, next: NextFunction) => {
   const { name } = req.body;
@@ -32,11 +23,3 @@ const prodAmountValidator = (req: Request, res: Response, next: NextFunction) =>
 };
 
 export default { prodNameValidator, prodAmountValidator };
-
-// const prodNameValidator = (req: Request, res: Response, next: NextFunction) => {
-//   const { name } = req.body;
-//   if (!name) {
-//     const nameRequired: MyError = { status: 400, message: '"name" is required' };
-//     throw nameRequired;
-//   }
-// };
