@@ -1,5 +1,5 @@
 interface User {
-  id: number,
+  id?: number,
   username: string;
   classe: string;
   level: number;
